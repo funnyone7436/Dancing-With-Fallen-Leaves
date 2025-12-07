@@ -3,6 +3,8 @@ import React, { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
+const base = import.meta.env.BASE_URL;
+
 export default function OrbitingModel() {
   const ref = useRef()
   const { scene, animations } = useGLTF(`${base}glb/bf_yellow.glb`)

@@ -3,6 +3,8 @@ import React, { useRef, useMemo } from 'react'
 import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 
+const base = import.meta.env.BASE_URL;
+
 export default function BuAnimationOrbit({ radius = 200, count = 12 * 6, scale = 1 }) {
   const groupRef = useRef()
   const { camera } = useThree()

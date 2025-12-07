@@ -3,6 +3,7 @@ import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { getAudio, getBeats, loadAudioAndBeats } from '../utils/AudioManager'
 
+const base = import.meta.env.BASE_URL;
 
 function BfImagesOrbit({
 	  centerRadius = 300,

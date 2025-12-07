@@ -2,7 +2,7 @@
 import React, { useMemo, useRef } from 'react'
 import { useLoader, useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
-
+const base = import.meta.env.BASE_URL;
 export default function RandomLeavesField({
   center = [0, 0, 0],
   radius = 100,

@@ -7,7 +7,7 @@ const persistentLeaves = {
   initialized: false,
   leaves: []
 }
-
+const base = import.meta.env.BASE_URL;
 export default function FallingLeaves({ motionValue = 0 }) {
   const groupRef = useRef()
 
