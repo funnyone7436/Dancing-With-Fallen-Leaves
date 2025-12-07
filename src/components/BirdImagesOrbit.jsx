@@ -10,7 +10,7 @@ export default function BirdAnimationOrbit({ radius = 200, count = 12 * 6, scale
   // Load animation frames
   const frames = useLoader(
     THREE.TextureLoader,
-    Array.from({ length: 12 }, (_, i) => `/r3f/bird/bird_${i + 1}.png`)
+    Array.from({ length: 12 }, (_, i) => `${base}r3f/bird/bird_${i + 1}.png`)
   )
 
   // Ensure proper encoding

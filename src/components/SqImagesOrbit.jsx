@@ -10,7 +10,7 @@ export default function SqAnimationOrbit({ radius = 200, count = 12 * 6, scale =
   // Load animation frames
   const frames = useLoader(
     THREE.TextureLoader,
-    Array.from({ length: 8 }, (_, i) => `/r3f/squ/s${i + 1}.png`)
+    Array.from({ length: 8 }, (_, i) => `${base}r3f/squ/s${i + 1}.png`)
   )
 
   // Ensure proper encoding

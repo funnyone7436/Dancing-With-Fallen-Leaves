@@ -14,7 +14,7 @@ export default function RandomLeavesField({
 
   const textures = useLoader(
     THREE.TextureLoader,
-    Array.from({ length: 23 }, (_, i) => `/r3f/leave_color/leave_color_${i + 1}.png`)
+    Array.from({ length: 23 }, (_, i) => `${base}r3f/leave_color/leave_color_${i + 1}.png`)
   )
 
   const leaves = useMemo(() => {

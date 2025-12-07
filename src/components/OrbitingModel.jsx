@@ -5,7 +5,7 @@ import { useFrame } from '@react-three/fiber'
 
 export default function OrbitingModel() {
   const ref = useRef()
-  const { scene, animations } = useGLTF('/glb/bf_yellow.glb')
+  const { scene, animations } = useGLTF(`${base}glb/bf_yellow.glb`)
   const { actions, mixer } = useAnimations(animations, ref)
 
   // Play model animations

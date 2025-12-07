@@ -10,7 +10,7 @@ export default function DogAnimationOrbit({ radius = 200, count = 12 * 6, scale 
   // Load animation frames
   const frames = useLoader(
     THREE.TextureLoader,
-    Array.from({ length: 10 }, (_, i) => `/r3f/dog/d${i + 1}.png`)
+    Array.from({ length: 10 }, (_, i) => `${base}r3f/dog/d${i + 1}.png`)
   )
 
   // Ensure proper encoding

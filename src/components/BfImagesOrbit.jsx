@@ -5,16 +5,16 @@ import { getAudio, getBeats, loadAudioAndBeats } from '../utils/AudioManager'
 
 
 function BfImagesOrbit({
-  centerRadius = 300,
-  birdCount = 15,
-  birdScale = 9,
-  birdRadius = 48,
-  sequences = [
-    { path: '/r3f/gbf/gbf', length: 14 },
-    { path: '/r3f/bf/bf', length: 14 },
-    { path: '/r3f/rbf/rbf', length: 14 },
-    { path: '/r3f/bbf/bbf', length: 14 }
-  ]
+	  centerRadius = 300,
+	  birdCount = 15,
+	  birdScale = 9,
+	  birdRadius = 48,
+	  defaultSequences = [
+		{ path: `${base}r3f/gbf/gbf`, length: 14 },
+		{ path: `${base}r3f/bf/bf`, length: 14 },
+		{ path: `${base}r3f/rbf/rbf`, length: 14 },
+		{ path: `${base}r3f/bbf/bbf`, length: 14 }
+	  ]
 }) {
   const { camera } = useThree()
   const pointRef = useRef()

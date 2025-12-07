@@ -12,7 +12,7 @@ export default function FallingLeaves({ motionValue = 0 }) {
   const groupRef = useRef()
 
   const leafPaths = Array.from({ length: 23 }, (_, i) =>
-    `/r3f/leave_color/leave_color_${i + 1}.png`
+    `${base}r3f/leave_color/leave_color_${i + 1}.png`
   )
   const textures = useLoader(THREE.TextureLoader, leafPaths)
 

@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// IMPORTANT: use your repo name here
 export default defineConfig({
-  plugins: [react()],
+  base: '/Dancing-With-Fallen-Leaves/',
+  plugins: [react()]
 })

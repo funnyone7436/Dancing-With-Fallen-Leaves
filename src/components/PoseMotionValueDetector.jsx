@@ -10,11 +10,14 @@ export default function PoseMotionValueDetector({ onMotionValue, debug = false }
   const startedRef = React.useRef(false)
 
   // --- Asset Loading Configuration ---
-  const PUBLIC_BASE = (typeof BASE === 'string' && BASE) ? BASE : '/'
-  const LOCAL_BASE = new URL(`${PUBLIC_BASE}vendor/mediapipe/`, window.location.href).href
-  const CDN_UNPKG = 'https://unpkg.com/@mediapipe/pose@0.5.167/'
-  const CDN_JSD   = 'https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.5.167/'
-  const BASES = [LOCAL_BASE, CDN_UNPKG, CDN_JSD]
+	const PUBLIC_BASE = import.meta.env.BASE_URL || '/'
+
+	const LOCAL_BASE = `${PUBLIC_BASE}vendor/mediapipe/`
+
+	const CDN_UNPKG = 'https://unpkg.com/@mediapipe/pose@0.5.167/'
+	const CDN_JSD   = 'https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.5.167/'
+
+	const BASES = [LOCAL_BASE, CDN_UNPKG, CDN_JSD]
 
   const loadTag = (src) => new Promise((res, rej) => {
     const s = document.createElement('script')
