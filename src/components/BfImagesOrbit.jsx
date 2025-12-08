@@ -139,7 +139,6 @@ function BfImagesOrbit({
         {birds.map((bird, i) => {
 			const seq = sequences?.[bird.seqIndex]
 			const idx = (bird.seqStart ?? 0) + bird.textureIndex	
-          //const idx = bird.seqIndex * sequences[bird.seqIndex].length + bird.textureIndex
           return (
             <mesh key={i}>
               <planeGeometry args={[birdScale, birdScale]} />

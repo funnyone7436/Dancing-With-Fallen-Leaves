@@ -47,7 +47,7 @@ export default function App() {
       {/* 3D Scene */}
       <Canvas>
         <PerspectiveCamera makeDefault fov={75} position={[0, 0, 3]} />
-        <CameraController speed={0.01} initialAngle={Math.PI / 2} />
+        <CameraController speed={0.009} initialAngle={Math.PI / 2} />
 
         <ambientLight intensity={1.5} />
         <directionalLight position={[5, 10, 5]} intensity={5} />

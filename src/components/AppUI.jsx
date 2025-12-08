@@ -137,7 +137,7 @@ export default function AppUI({ motionValue }) {
         zIndex: 1000
       }}>
         <div>🔐 No worries, just fun!</div>
-        <a href="https://github.com/your-repo" target="_blank" style={{ color: '#61dafb' }}>🔍 View the full source on GitHub</a>
+        <a href="https://github.com/funnyone7436/Dancing-With-Fallen-Leaves" target="_blank" style={{ color: '#61dafb' }}>🔍 View the full source on GitHub</a>
       </div>
     </>
   )
