@@ -18,6 +18,8 @@ import CameraController from './components/CameraController'
 import PoseMotionValueDetector from './components/PoseMotionValueDetector'
 import AppUI from './components/AppUI'
 
+const BASE = import.meta.env.BASE_URL || '/'
+
 export default function App() {
   const [motionValue, setMotionValue] = useState(0)
   const [average, setAverage] = useState(0)
@@ -66,10 +68,10 @@ export default function App() {
             count={2}
             scale={20}
             sequences={[
-              { path: '/r3f/gbf/gbf', length: 14 },
-              { path: '/r3f/bf/bf', length: 14 },
-              { path: '/r3f/rbf/rbf', length: 14 },
-              { path: '/r3f/bbf/bbf', length: 14 }
+              { path: `${BASE}r3f/gbf/gbf`, length: 14 }, 
+              { path: `${BASE}r3f/bf/bf`, length: 14 },
+              { path: `${BASE}r3f/rbf/rbf`, length: 14 },
+              { path: `${BASE}r3f/bbf/bbf`, length: 14 }
             ]}
           />
 
