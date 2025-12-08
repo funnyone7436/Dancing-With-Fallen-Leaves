@@ -10,7 +10,7 @@ function BfImagesOrbit({
 	  birdCount = 15,
 	  birdScale = 9,
 	  birdRadius = 48,
-	  defaultSequences = [
+	  sequences = [
 		{ path: `${BASE}r3f/gbf/gbf`, length: 14 },
 		{ path: `${BASE}r3f/bf/bf`, length: 14 },
 		{ path: `${BASE}r3f/rbf/rbf`, length: 14 },
