@@ -11,8 +11,6 @@ export default function PoseMotionValueDetector({ onMotionValue, debug = false }
 
 	const PUBLIC_BASE = import.meta.env.BASE_URL;
 	const LOCAL_BASE = `${PUBLIC_BASE}vendor/mediapipe/`;
-
-
 	const CDN_UNPKG = 'https://unpkg.com/@mediapipe/pose@0.5.167/';
 	const CDN_JSD   = 'https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.5.167/';
 

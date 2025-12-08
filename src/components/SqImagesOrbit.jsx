@@ -3,6 +3,8 @@ import React, { useRef, useMemo } from 'react'
 import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 
+const BASE = import.meta.env.BASE_URL || '/'
+
 export default function SqAnimationOrbit({ radius = 200, count = 12 * 6, scale = 1 }) {
   const groupRef = useRef()
   const { camera } = useThree()
@@ -10,7 +12,7 @@ export default function SqAnimationOrbit({ radius = 200, count = 12 * 6, scale =
   // Load animation frames
   const frames = useLoader(
     THREE.TextureLoader,
-    Array.from({ length: 8 }, (_, i) => `${base}r3f/squ/s${i + 1}.png`)
+    Array.from({ length: 8 }, (_, i) => `${BASE}r3f/squ/s${i + 1}.png`)
   )
 
   // Ensure proper encoding

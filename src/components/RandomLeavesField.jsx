@@ -2,7 +2,10 @@
 import React, { useMemo, useRef } from 'react'
 import { useLoader, useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
-const base = import.meta.env.BASE_URL;
+
+
+const BASE = import.meta.env.BASE_URL || '/'
+
 export default function RandomLeavesField({
   center = [0, 0, 0],
   radius = 100,
@@ -14,7 +17,7 @@ export default function RandomLeavesField({
 
   const textures = useLoader(
     THREE.TextureLoader,
-    Array.from({ length: 23 }, (_, i) => `${base}r3f/leave_color/leave_color_${i + 1}.png`)
+    Array.from({ length: 23 }, (_, i) => `${BASE}r3f/leave_color/leave_color_${i + 1}.png`)
   )
 
   const leaves = useMemo(() => {

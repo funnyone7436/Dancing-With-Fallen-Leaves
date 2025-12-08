@@ -2,8 +2,10 @@ import React from 'react'
 import { useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 
+
+const BASE = import.meta.env.BASE_URL || '/'
 export default function BackgroundSphere() {
-  const texture = useLoader(THREE.TextureLoader, `${import.meta.env.BASE_URL}bg.png`)
+  const texture = useLoader(THREE.TextureLoader, `${BASE}bg.png`)
 
   texture.wrapS = THREE.RepeatWrapping
   texture.wrapT = THREE.ClampToEdgeWrapping

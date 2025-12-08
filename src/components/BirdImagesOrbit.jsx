@@ -2,7 +2,9 @@
 import React, { useRef, useMemo } from 'react'
 import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
-const base = import.meta.env.BASE_URL;
+
+
+const BASE = import.meta.env.BASE_URL || '/'
 
 export default function BirdAnimationOrbit({ radius = 200, count = 12 * 6, scale = 1 }) {
   const groupRef = useRef()
@@ -11,7 +13,7 @@ export default function BirdAnimationOrbit({ radius = 200, count = 12 * 6, scale
   // Load animation frames
   const frames = useLoader(
     THREE.TextureLoader,
-    Array.from({ length: 12 }, (_, i) => `${base}r3f/bird/bird_${i + 1}.png`)
+    Array.from({ length: 12 }, (_, i) => `${BASE}r3f/bird/bird_${i + 1}.png`)
   )
 
   // Ensure proper encoding

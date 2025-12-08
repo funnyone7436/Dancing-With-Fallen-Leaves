@@ -2,7 +2,8 @@
 import React, { useRef, useMemo } from 'react'
 import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
-const base = import.meta.env.BASE_URL;
+
+const BASE = import.meta.env.BASE_URL || '/'
 export default function DogAnimationOrbit({ radius = 200, count = 12 * 6, scale = 1 }) {
   const groupRef = useRef()
   const { camera } = useThree()
@@ -10,7 +11,7 @@ export default function DogAnimationOrbit({ radius = 200, count = 12 * 6, scale 
   // Load animation frames
   const frames = useLoader(
     THREE.TextureLoader,
-    Array.from({ length: 10 }, (_, i) => `${base}r3f/dog/d${i + 1}.png`)
+    Array.from({ length: 10 }, (_, i) => `${BASE}r3f/dog/d${i + 1}.png`)
   )
 
   // Ensure proper encoding

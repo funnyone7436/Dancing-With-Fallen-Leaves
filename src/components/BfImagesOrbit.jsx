@@ -3,7 +3,7 @@ import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { getAudio, getBeats, loadAudioAndBeats } from '../utils/AudioManager'
 
-const base = import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL || '/'
 
 function BfImagesOrbit({
 	  centerRadius = 300,
@@ -11,10 +11,10 @@ function BfImagesOrbit({
 	  birdScale = 9,
 	  birdRadius = 48,
 	  defaultSequences = [
-		{ path: `${base}r3f/gbf/gbf`, length: 14 },
-		{ path: `${base}r3f/bf/bf`, length: 14 },
-		{ path: `${base}r3f/rbf/rbf`, length: 14 },
-		{ path: `${base}r3f/bbf/bbf`, length: 14 }
+		{ path: `${BASE}r3f/gbf/gbf`, length: 14 },
+		{ path: `${BASE}r3f/bf/bf`, length: 14 },
+		{ path: `${BASE}r3f/rbf/rbf`, length: 14 },
+		{ path: `${BASE}r3f/bbf/bbf`, length: 14 }
 	  ]
 }) {
   const { camera } = useThree()

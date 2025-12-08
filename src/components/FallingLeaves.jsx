@@ -7,12 +7,12 @@ const persistentLeaves = {
   initialized: false,
   leaves: []
 }
-const base = import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL || '/'
 export default function FallingLeaves({ motionValue = 0 }) {
   const groupRef = useRef()
 
   const leafPaths = Array.from({ length: 23 }, (_, i) =>
-    `${base}r3f/leave_color/leave_color_${i + 1}.png`
+    `${BASE}r3f/leave_color/leave_color_${i + 1}.png`
   )
   const textures = useLoader(THREE.TextureLoader, leafPaths)
 
